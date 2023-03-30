@@ -7,6 +7,7 @@ set grid
 set title "Função de Inserção"
 set format x "%2.0t{/Symbol \264}10^{%L}"
 set format y "%2.0t{/Symbol \264}10^{%L}"
-set xrange [1:10000000]
-plot "resultados.dat" with points lw 5 lt rgb "red" title "Empirico", \
-    x*log(x) lw 5 lt rgb "blue" title "Grafico"
+set xrange [1:1000000]
+plot "resultados.dat" with points lw 5 lt rgb "red" title "Prático", \
+     0.1*x*log(x) lw 5 lt rgb "blue" title "Teoria"
+# plot "resultados.dat" with points lw 5 lt rgb "red" title "Empirico"
